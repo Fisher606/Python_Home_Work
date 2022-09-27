@@ -42,13 +42,26 @@
 # - x=-34; y=-30 -> 3
 
 
-x = int(input('Введите значение x  '))
-y = int(input('Введите значение y  '))
-if x != 0 and x > 0 and y != 0 and y > 0 :
-    print(f' - x = {x}; y = {y} -> 1')
-elif x != 0 and x < 0 and y != 0 and y > 0 :
-    print(f' - x = {x}; y = {y} -> 4')
-elif x != 0 and x < 0 and y != 0 and y < 0 :
-    print(f' - x = {x}; y = {y} -> 3')
-elif x != 0 and x > 0 and y != 0 and y < 0 :
-    print(f' - x = {x}; y = {y} -> 2')
+# x = int(input('Введите значение x  '))
+# y = int(input('Введите значение y  '))
+# if x != 0 and x > 0 and y != 0 and y > 0 :
+#     print(f' - x = {x}; y = {y} -> 1')
+# elif x != 0 and x < 0 and y != 0 and y > 0 :
+#     print(f' - x = {x}; y = {y} -> 4')
+# elif x != 0 and x < 0 and y != 0 and y < 0 :
+#     print(f' - x = {x}; y = {y} -> 3')
+# elif x != 0 and x > 0 and y != 0 and y < 0 :
+#     print(f' - x = {x}; y = {y} -> 2')
+
+
+#Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y)
+
+x = int(input('Введите номер четверти  '))
+if x == int(1) :
+    print(f'Диапазон возможных координат точек в {x} четверти для x и y будет x > 0  и y > 0')
+elif x == int(2) :
+    print(f'Диапазон возможных координат точек в {x} четверти для x и y будет x > 0  и y < 0')
+elif x == int(3) :
+    print(f'Диапазон возможных координат точек в {x} четверти для x и y будет x < 0  и y < 0')
+elif x == int(4) :
+    print(f'Диапазон возможных координат точек в {x} четверти для x и y будет x < 0  и y > 0')
