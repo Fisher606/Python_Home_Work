@@ -6,22 +6,29 @@
 # - 7 -> да
 # - 1 -> нет
 
-a = int(input('Введите номер дня недели от 1 до 7:  '))
+# a = int(input('Введите номер дня недели от 1 до 7:  '))
 
-if a == int(1) :
-    print(f' - {a} - Рабочий')
-elif a == int(2) :
-    print(f' - {a} - Рабочий')
-elif a == int(3) :
-    print(f' - {a} - Рабочий')
-elif a == int(4) :
-    print(f' - {a} - Рабочий')
-elif a == int(5) :
-    print(f' - {a} - Рабочий')
-elif a == int(6) :
-    print(f' - {a} - Выходной')
-elif a == int(7) :
-    print(f' - {a} - Выходной')
+# if a == int(1) :
+#     print(f' - {a} - Рабочий')
+# elif a == int(2) :
+#     print(f' - {a} - Рабочий')
+# elif a == int(3) :
+#     print(f' - {a} - Рабочий')
+# elif a == int(4) :
+#     print(f' - {a} - Рабочий')
+# elif a == int(5) :
+#     print(f' - {a} - Рабочий')
+# elif a == int(6) :
+#     print(f' - {a} - Выходной')
+# elif a == int(7) :
+#     print(f' - {a} - Выходной')
 
 
-    
+#Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
+
+x = 1
+y = 2
+z = 3
+print (not(x or y or z) == (not(x) and not(y) and not(z)))
+
+
