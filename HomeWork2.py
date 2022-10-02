@@ -23,12 +23,15 @@
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
 
-n = int(input('input N: '))
-factorial = 1
-for i in range(1, n+1):
-    factorial *= i
-    print(factorial, end=' ')
+# n = int(input('input N: '))
+# factorial = 1
+# for i in range(1, n+1):
+#     factorial *= i
+#     print(factorial, end=' ')
 
 
+# Задача 3. Задайте список из n чисел последовательности $(1+\frac 1 n)^n$ и выведите на экран их сумму (1+(1/n))^n
 
-
+n = int(input('Введите n '))
+list = [round((1+1/i)**i, 3) for i in range(1, n+1)]
+print(f'Последовательность: {list}\nСумма: {sum(list)}')
