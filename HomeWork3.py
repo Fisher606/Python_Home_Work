@@ -10,3 +10,21 @@
 # print(f' {a} -> на нечётных позициях элементы {a[1::2]}, ответ: {sum(a[1::2])} ')
 
 
+# Напишите программу, которая найдёт произведение пар чисел списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+
+# Пример:
+
+# - [2, 3, 4, 5, 6] => [12, 15, 16];
+# - [2, 3, 5, 6] => [12, 15]
+
+
+
+def twin_multiplication(list):
+    a = len(list)//2 + 1 if len(list) % 2 != 0 else len(list)//2
+    new_multiplication_list = [list[i]*list[len(list)-i-1] for i in range(a)]
+    print(f' {list} => {new_multiplication_list}')
+
+list = [22,31,67,8,45,567]
+twin_multiplication(list)
+
+
