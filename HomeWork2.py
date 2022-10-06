@@ -43,11 +43,28 @@
 
 # Я не смог(
 
-# Реализуйте алгоритм перемешивания списка
+# import random
+# n=int(input('input number '))
+# list=[]
+# for i in range(n):                      # генератор случайных чисел
+#     a=random.randint(-n, n)
+#     list.append(a)   
+# print (list)
+# index_list = input(f'введите позиции элементов от 1 до {n} через пробел').split()
+# result=1
+# for j in range(len(index_list)):        # перебор элементов с номерами позиций
+#     a=int(index_list[j])-1
+#     print (f'{result}*{int(list[a])}', end=' ')
+#     result*=int(list[a])    
+# print (f'= {result}')
 
 
-list = ['Высокогорный водолаз', 'RevenHolm', 4, 900, 'Neo prosnis, ty obosralsya!!!']
-print(list) 
-import random
-random.shuffle(list)
-print('->', list) 
+
+# Задача 5. Реализуйте алгоритм перемешивания списка
+
+
+# list = ['Высокогорный водолаз', 'RevenHolm', 4, 900, 'Neo prosnis, ty obosralsya!!!']
+# print(list) 
+# import random
+# random.shuffle(list)
+# print('->', list) 
