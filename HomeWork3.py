@@ -34,13 +34,27 @@
 
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-list = [1.1, 1.2, 3.1, 5, 10.01]
-min = 1
-max = 0
-for i in list:
-    if (i - int(i)) <= min:
-        min = i - int(i)
-    if (i - int(i)) >= max:
-        max = i - int(i)  
-print(round (max-min, 3))
+# list = [1.1, 1.2, 3.1, 5, 10.01]
+# min = 1
+# max = 0
+# for i in list:
+#     if (i - int(i)) <= min:
+#         min = i - int(i)
+#     if (i - int(i)) >= max:
+#         max = i - int(i)  
+# print(round (max-min, 3))
+
+# Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+# Пример:
+
+
+
+# n = int(input('Введите число: ')) 
+# b = ''
+# while n > 0:
+#     b = str(n % 2) + b
+#     n = n // 2
+# print(f'Число в двоичном коде: {b}')
+
 
