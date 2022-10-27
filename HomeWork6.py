@@ -1,4 +1,4 @@
-# Задача 3. Задайте последовательность чисел. Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
+# Задача 1. Задайте последовательность чисел. Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
 
 # lst = list(map(int, input("Введите числа через пробел:\n").split()))
 
@@ -24,25 +24,34 @@
 # list = [22,31,67,8,45,567]
 # twin_multiplication(list)
 
+# 2 решение
 
-# Задача 5. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
-# Пример: - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
+# li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61]
+# a = len(li)//2 + 1 if len(li) % 2 != 0 else len(li)//2
+# final_list = list(map(lambda x: [x]*[len()-x-1] , a))
+# print(final_list)
 
-from functools import reduce
-  
-fibbo = lambda n: reduce(lambda x, _: x+[x[-1]+x[-2]],
-                                 range(n-2), [0, 1])
-  
-print(fibbo(8))
 
-# Второй вариант
 
-def fibonacci(count):
-    fib_list = [0, 1]
+
+# # Задача 3. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+# # Пример: - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
+
+# from functools import reduce
   
-    any(map(lambda _: fib_list.append(sum(fib_list[-2:])),
-                                         range(2, count)))
+# fibbo = lambda n: reduce(lambda x, _: x+[x[-1]+x[-2]],
+#                                  range(n-2), [0, 1])
   
-    return fib_list[:count]
+# print(fibbo(8))
+
+# # Второй вариант
+
+# def fibbo(count):
+#     fib_list = [0, 1]
   
-print(fibonacci(8))
+#     any(map(lambda _: fib_list.append(sum(fib_list[-2:])),
+#                                          range(2, count)))
+  
+#     return fib_list[:count]
+  
+# print(fibbo(8))
