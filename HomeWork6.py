@@ -7,20 +7,42 @@
 # print(unique)
 
 
-# Задача 2. Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
+# Задача 2. Напишите программу, которая найдёт произведение пар чисел списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 
 # Пример:
 
-# - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
-
-
-n = int(input('input N: '))
-factorial = 1
-for i in range(1, n+1):
-    factorial *= i
-    print(factorial, end=' ')
+# - [2, 3, 4, 5, 6] => [12, 15, 16];
+# - [2, 3, 5, 6] => [12, 15]
 
 
 
+# def twin_multiplication(list):
+#     a = len(list)//2 + 1 if len(list) % 2 != 0 else len(list)//2
+#     new_multiplication_list = [list[i]*list[len(list)-i-1] for i in range(a)]
+#     print(f' {list} => {new_multiplication_list}')
+
+# list = [22,31,67,8,45,567]
+# twin_multiplication(list)
 
 
+# Задача 5. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+# Пример: - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
+
+from functools import reduce
+  
+fibbo = lambda n: reduce(lambda x, _: x+[x[-1]+x[-2]],
+                                 range(n-2), [0, 1])
+  
+print(fibbo(8))
+
+# Второй вариант
+
+def fibonacci(count):
+    fib_list = [0, 1]
+  
+    any(map(lambda _: fib_list.append(sum(fib_list[-2:])),
+                                         range(2, count)))
+  
+    return fib_list[:count]
+  
+print(fibonacci(8))
